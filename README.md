@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
+
+Professional portfolio website built with modern web technologies.
+
+## Tech Stack
+
+- **Next.js 14** - React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first styling
+- **Framer Motion** - Smooth animations and transitions
+- **GSAP** - Advanced scroll effects (ready to use)
+
+## Design System
+
+- **Theme**: Dark mode (black/charcoal)
+- **Typography**: Inter font family
+- **Colors**: 
+  - Primary: White
+  - Secondary: Gray
+  - Accent: Cyan (#06B6D4)
+- **Animation Style**: Slow, smooth easing, subtle movements
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/
+│   ├── globals.css      # Global styles and Tailwind config
+│   ├── layout.tsx       # Root layout with Inter font
+│   └── page.tsx         # Main page with all sections
+└── components/
+    └── sections/
+        ├── Hero.tsx     # Hero with parallax effect
+        ├── About.tsx    # About section with storytelling
+        ├── Projects.tsx # Animated project cards
+        ├── Stack.tsx    # Visual tech stack display
+        └── Contact.tsx  # Minimal contact section
+```
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+### Hero Section
+- Large typography with gradient effects
+- Smooth entrance animations
+- Subtle parallax scroll effect
+- Animated grid background
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### About Section
+- Storytelling approach
+- Scroll-triggered animations
+- Clean, readable layout
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Projects Section
+- Animated project cards
+- Hover effects with scale and glow
+- Scroll reveal animations
+- Tag system for technologies
+
+### Stack Section
+- Visual display with icons
+- Interactive hover effects
+- Staggered entrance animations
+
+### Contact Section
+- Minimal, direct design
+- Social media links
+- Smooth animations
+
+## Customization
+
+### Update Personal Information
+
+1. **Hero Section** (`src/components/sections/Hero.tsx`):
+   - Edit title and subtitle text
+
+2. **About Section** (`src/components/sections/About.tsx`):
+   - Update your story and description
+
+3. **Projects** (`src/components/sections/Projects.tsx`):
+   - Modify the `projects` array with your own work
+
+4. **Stack** (`src/components/sections/Stack.tsx`):
+   - Update the `technologies` array with your tech stack
+
+5. **Contact** (`src/components/sections/Contact.tsx`):
+   - Add your social media links and email
+
+### Add GSAP Effects
+
+GSAP is already installed. To add advanced scroll effects:
+
+```typescript
+"use client";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
+
+export default function YourComponent() {
+  const ref = useRef(null);
+  
+  useEffect(() => {
+    gsap.to(ref.current, {
+      scrollTrigger: {
+        trigger: ref.current,
+        start: "top center",
+        end: "bottom center",
+        scrub: true,
+      },
+      y: 100,
+      opacity: 0.5,
+    });
+  }, []);
+  
+  return <div ref={ref}>Your content</div>;
+}
+```
+
+## Build for Production
+
+```bash
+npm run build
+npm start
+```
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deploy easily on [Vercel](https://vercel.com):
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npx vercel
+```
+
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
