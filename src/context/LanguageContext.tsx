@@ -13,6 +13,7 @@ interface LanguageContextType {
 const translations = {
     es: {
         // Hero
+        "hero.name": "Diego Carrasquilla",
         "hero.title1": "Software",
         "hero.title2": "Engineer",
         "hero.subtitle": "Construyo sistemas digitales que automatizan, escalan y generan valor real.",
@@ -27,6 +28,8 @@ const translations = {
         "about.p3": "No construyo features, construyo sistemas. Automatización sobre procesos manuales. Simplicidad sobre complejidad. Cada decisión técnica debe justificarse con valor de negocio real.",
 
         // Projects
+        "projects.featured": "Proyectos",
+        "projects.destacados": "Destacados",
         "projects.title": "Proyectos",
         "projects.1.title": "Xervix App",
         "projects.1.desc": "Aplicación profesional móvil construida con Flutter. Arquitectura limpia, UI reusable y experiencia de usuario fluida.",
@@ -54,6 +57,7 @@ const translations = {
     },
     en: {
         // Hero
+        "hero.name": "Diego Carrasquilla",
         "hero.title1": "Software",
         "hero.title2": "Engineer",
         "hero.subtitle": "Building digital systems that automate, scale and deliver real value.",
@@ -68,6 +72,8 @@ const translations = {
         "about.p3": "I don't build features, I build systems. Automation over manual processes. Simplicity over complexity. Every technical decision must be justified by real business value.",
 
         // Projects
+        "projects.featured": "Featured",
+        "projects.destacados": "Projects",
         "projects.title": "Projects",
         "projects.1.title": "Xervix App",
         "projects.1.desc": "Professional mobile application built with Flutter. Clean architecture, reusable UI and smooth user experience.",

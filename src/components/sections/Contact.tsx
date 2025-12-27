@@ -174,7 +174,7 @@ export default function Contact() {
                 />
 
                 <motion.h2
-                    className="text-6xl md:text-8xl font-black mb-8 leading-tight"
+                    className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-6 md:mb-8 leading-tight px-4"
                 >
                     {t("contact.title").split(" ").map((word, i) => (
                         <motion.span
@@ -197,7 +197,7 @@ export default function Contact() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.8, delay: 0.4, ease: [0.6, 0.05, 0.01, 0.9] }}
-                    className="text-secondary text-xl md:text-2xl mb-16 max-w-2xl mx-auto font-light"
+                    className="text-secondary text-lg sm:text-xl md:text-2xl mb-12 md:mb-16 max-w-2xl mx-auto font-light px-4"
                 >
                     {t("contact.subtitle")}
                 </motion.p>

@@ -46,7 +46,6 @@ const projects: Project[] = [
 function ProjectCard({ project, index }: { project: Project; index: number }) {
     const { t } = useLanguage();
     const [isHovered, setIsHovered] = useState(false);
-    const [isExpanded, setIsExpanded] = useState(false);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -68,35 +67,26 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                 delay: index * 0.15,
                 ease: [0.6, 0.05, 0.01, 0.9]
             }}
-            onMouseEnter={() => {
-                setIsHovered(true);
-                setTimeout(() => setIsExpanded(true), 300);
-            }}
-            onMouseLeave={() => {
-                setIsHovered(false);
-                setIsExpanded(false);
-            }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
             onMouseMove={handleMouseMove}
             onClick={() => project.url && window.open(project.url, "_blank")}
             className="relative group perspective-1000"
-            style={{ zIndex: isExpanded ? 50 : 1 }}
+            style={{ zIndex: isHovered ? 50 : 1 }}
         >
             <motion.div
                 animate={{
-                    scale: isExpanded ? 1.08 : 1,
+                    scale: isHovered ? 1.08 : 1,
                     rotateX: isHovered ? mousePosition.y * 0.005 : 0,
                     rotateY: isHovered ? mousePosition.x * 0.005 : 0,
-                    height: isExpanded ? 'auto' : 'auto',
                 }}
                 transition={{ duration: 0.4, ease: [0.6, 0.05, 0.01, 0.9] }}
                 className={`relative p-8 rounded-2xl backdrop-blur-sm overflow-hidden transition-all duration-300 bg-surface ${project.url ? 'cursor-pointer' : ''}`}
                 style={{
                     border: `1px solid ${isHovered ? '#0F3D2E' : '#1E2623'}`,
-                    boxShadow: isExpanded
+                    boxShadow: isHovered
                         ? '0 40px 100px rgba(15,61,46,0.6), inset 0 1px 0 rgba(255,255,255,0.08)'
-                        : isHovered
-                            ? '0 30px 80px rgba(15,61,46,0.4), inset 0 1px 0 rgba(255,255,255,0.05)'
-                            : '0 4px 20px rgba(0,0,0,0.2)',
+                        : '0 4px 20px rgba(0,0,0,0.2)',
                     transformStyle: 'preserve-3d',
                 }}
             >
@@ -143,8 +133,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                     <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{
-                            height: isExpanded ? 'auto' : 0,
-                            opacity: isExpanded ? 1 : 0,
+                            height: isHovered ? 'auto' : 0,
+                            opacity: isHovered ? 1 : 0,
                         }}
                         transition={{ duration: 0.4, ease: [0.6, 0.05, 0.01, 0.9] }}
                         className="overflow-hidden"
@@ -158,7 +148,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                             {project.url && (
                                 <motion.div
                                     initial={{ opacity: 0, y: 20 }}
-                                    animate={isExpanded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                                    animate={isHovered ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                     transition={{ delay: 0.2, duration: 0.4 }}
                                     className="relative rounded-xl overflow-hidden border-2 border-brand/40 shadow-2xl"
                                 >
@@ -252,13 +242,13 @@ export default function Projects() {
                     initial={{ opacity: 0, y: 50 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.8, ease: [0.6, 0.05, 0.01, 0.9] }}
-                    className="text-5xl md:text-7xl font-bold mb-16 text-center"
+                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-12 md:mb-16 text-center"
                 >
-                    <span className="text-primary">Featured </span>
-                    <span className="text-brand">{t("projects.title").split(" ").pop()}</span>
+                    <span className="text-primary">{t("projects.featured")} </span>
+                    <span className="text-brand">{t("projects.destacados")}</span>
                 </motion.h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                     {projects.map((project, index) => (
                         <ProjectCard key={project.id} project={project} index={index} />
                     ))}

@@ -126,8 +126,18 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: [0.6, 0.05, 0.01, 0.9], delay: 0.2 }}
-                    className="text-7xl md:text-8xl lg:text-[10rem] font-black mb-6 leading-[0.9] tracking-tight"
+                    className="text-5xl sm:text-6xl md:text-8xl lg:text-[10rem] font-black mb-6 leading-[0.9] tracking-tight"
                 >
+                    {/* Name */}
+                    <motion.span
+                        className="block text-accent text-sm sm:text-base md:text-xl lg:text-2xl font-light tracking-[0.3em] uppercase mb-2 md:mb-4"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: 0.3, ease: [0.6, 0.05, 0.01, 0.9] }}
+                    >
+                        {t("hero.name")}
+                    </motion.span>
+
                     <motion.span
                         className="block text-primary"
                         initial={{ opacity: 0, x: -50 }}
@@ -156,7 +166,7 @@ export default function Hero() {
                     transition={{ duration: 1, delay: 0.8, ease: [0.6, 0.05, 0.01, 0.9] }}
                     className="relative"
                 >
-                    <p className="text-secondary text-lg md:text-2xl max-w-3xl mx-auto leading-relaxed font-light">
+                    <p className="text-secondary text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed font-light px-4">
                         {t("hero.subtitle")}
                     </p>
                 </motion.div>

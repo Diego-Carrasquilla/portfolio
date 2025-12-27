@@ -46,7 +46,7 @@ export default function About() {
                         className="h-1 w-20 bg-brand mb-8 rounded-full"
                     />
 
-                    <h2 className="text-6xl md:text-8xl font-black mb-16 leading-tight">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-12 md:mb-16 leading-tight">
                         {t("about.title").split(" ").map((word, i) => (
                             <motion.span
                                 key={i}
@@ -71,7 +71,7 @@ export default function About() {
                             transition={{ duration: 0.8, delay: 0.4, ease: [0.6, 0.05, 0.01, 0.9] }}
                             className="relative p-8 rounded-2xl bg-surface/30 backdrop-blur-sm border border-border/50"
                         >
-                            <p className="text-primary text-xl md:text-3xl leading-relaxed font-light">
+                            <p className="text-primary text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed font-light">
                                 {t("about.p1")}{" "}
                                 <motion.span
                                     className="text-brand font-bold relative inline-block"
@@ -105,7 +105,7 @@ export default function About() {
                             initial={{ opacity: 0, x: 30 }}
                             animate={isInView ? { opacity: 1, x: 0 } : {}}
                             transition={{ duration: 0.8, delay: 0.6, ease: [0.6, 0.05, 0.01, 0.9] }}
-                            className="text-secondary text-lg md:text-xl leading-relaxed pl-8 border-l-2 border-brand/30"
+                            className="text-secondary text-base sm:text-lg md:text-xl leading-relaxed pl-4 md:pl-8 border-l-2 border-brand/30"
                         >
                             {t("about.p2")}
                         </motion.p>
@@ -114,7 +114,7 @@ export default function About() {
                             initial={{ opacity: 0, x: -30 }}
                             animate={isInView ? { opacity: 1, x: 0 } : {}}
                             transition={{ duration: 0.8, delay: 0.8, ease: [0.6, 0.05, 0.01, 0.9] }}
-                            className="text-secondary text-lg md:text-xl leading-relaxed pl-8 border-l-2 border-brand/30"
+                            className="text-secondary text-base sm:text-lg md:text-xl leading-relaxed pl-4 md:pl-8 border-l-2 border-brand/30"
                         >
                             {t("about.p3")}
                         </motion.p>
@@ -125,7 +125,7 @@ export default function About() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.8, delay: 1, ease: [0.6, 0.05, 0.01, 0.9] }}
-                        className="mt-16 grid grid-cols-3 gap-8"
+                        className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8"
                     >
                         {[
                             { value: "Flutter", label: "Mobile Apps" },
