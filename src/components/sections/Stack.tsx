@@ -10,13 +10,19 @@ import {
     SiMysql,
     SiRedis,
     SiDocker,
-    SiWhatsapp,
     SiGit,
-    SiLinux,
-    SiGooglecalendar,
     SiTypescript,
     SiN8N,
     SiFastapi,
+    SiPython,
+    SiDotnet,
+    SiTwilio,
+    SiReact,
+    SiJavascript,
+    SiStrapi,
+    SiHtml5,
+    SiCss3,
+    SiTailwindcss,
 } from "react-icons/si";
 import { IconType } from "react-icons";
 
@@ -41,6 +47,54 @@ const technologies: Tech[] = [
         hoverColor: "#68BB59"
     },
     {
+        name: "Python",
+        Icon: SiPython,
+        color: "#3776AB",
+        hoverColor: "#4B8BBF"
+    },
+    {
+        name: ".NET",
+        Icon: SiDotnet,
+        color: "#512BD4",
+        hoverColor: "#7C4DFF"
+    },
+    {
+        name: "React",
+        Icon: SiReact,
+        color: "#61DAFB",
+        hoverColor: "#80E5FF"
+    },
+    {
+        name: "JavaScript",
+        Icon: SiJavascript,
+        color: "#F7DF1E",
+        hoverColor: "#FFE952"
+    },
+    {
+        name: "TypeScript",
+        Icon: SiTypescript,
+        color: "#3178C6",
+        hoverColor: "#5199E8"
+    },
+    {
+        name: "HTML",
+        Icon: SiHtml5,
+        color: "#E34F26",
+        hoverColor: "#FF6B47"
+    },
+    {
+        name: "CSS",
+        Icon: SiCss3,
+        color: "#1572B6",
+        hoverColor: "#2B9FD9"
+    },
+    {
+        name: "Tailwind",
+        Icon: SiTailwindcss,
+        color: "#06B6D4",
+        hoverColor: "#22D3EE"
+    },
+    {
         name: "PostgreSQL",
         Icon: SiPostgresql,
         color: "#336791",
@@ -59,46 +113,34 @@ const technologies: Tech[] = [
         hoverColor: "#FF4438"
     },
     {
-        name: "Docker",
-        Icon: SiDocker,
-        color: "#2496ED",
-        hoverColor: "#4DB0FF"
-    },
-    {
-        name: "WhatsApp",
-        Icon: SiWhatsapp,
-        color: "#25D366",
-        hoverColor: "#3FE87E"
-    },
-    {
-        name: "Git",
-        Icon: SiGit,
-        color: "#F05032",
-        hoverColor: "#F77052"
-    },
-    {
-        name: "Linux",
-        Icon: SiLinux,
-        color: "#FCC624",
-        hoverColor: "#FFD84D"
-    },
-    {
-        name: "Calendar API",
-        Icon: SiGooglecalendar,
-        color: "#4285F4",
-        hoverColor: "#6BA5FF"
-    },
-    {
-        name: "TypeScript",
-        Icon: SiTypescript,
-        color: "#3178C6",
-        hoverColor: "#5199E8"
+        name: "Strapi",
+        Icon: SiStrapi,
+        color: "#4945FF",
+        hoverColor: "#7B79FF"
     },
     {
         name: "N8N",
         Icon: SiN8N,
         color: "#EA4B71",
         hoverColor: "#FF6B8F"
+    },
+    {
+        name: "Twilio",
+        Icon: SiTwilio,
+        color: "#F22F46",
+        hoverColor: "#FF5C6F"
+    },
+    {
+        name: "Docker",
+        Icon: SiDocker,
+        color: "#2496ED",
+        hoverColor: "#4DB0FF"
+    },
+    {
+        name: "Git",
+        Icon: SiGit,
+        color: "#F05032",
+        hoverColor: "#F77052"
     },
 ];
 

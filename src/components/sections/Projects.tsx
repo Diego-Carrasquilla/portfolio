@@ -21,7 +21,7 @@ const projects: Project[] = [
         titleKey: "projects.1.title",
         descKey: "projects.1.desc",
         detailsKey: "projects.1.details",
-        tags: ["Flutter", "REST APIs", "Clean Architecture"],
+        tags: [".NET Framework", "REST APIs", "XAML", "Git"],
         color: "from-green-500/10 to-emerald-500/10",
     },
     {
