@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Diego Carrasquilla — Software Engineer",
-  description: "Construyo sistemas digitales que automatizan, escalan y generan valor real. Especializado en Flutter, N8N, y backends empresariales.",
+  description: "Ingeniero de software especializado en arquitecturas escalables, automatización de procesos y backends enterprise. Flutter, N8N, Node.js, C#.",
   keywords: ["Software Engineer", "Flutter Developer", "N8N", "Backend Developer", "Diego Carrasquilla", "Full Stack Developer"],
   authors: [{ name: "Diego Carrasquilla" }],
   creator: "Diego Carrasquilla",

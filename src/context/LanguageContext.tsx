@@ -16,7 +16,7 @@ const translations = {
         "hero.name": "Diego Carrasquilla",
         "hero.title1": "Software",
         "hero.title2": "Engineer",
-        "hero.subtitle": "Construyo sistemas digitales que automatizan, escalan y generan valor real.",
+        "hero.subtitle": "Diseño arquitecturas, automatizo procesos y conecto sistemas que escalan.",
 
         // About
         "about.title": "Sobre Mí",
@@ -24,16 +24,16 @@ const translations = {
         "about.p1.highlight1": "arquitecturas escalables",
         "about.p1.and": "e",
         "about.p1.highlight2": "integraciones complejas",
-        "about.p2": "Transformo procesos manuales en sistemas automatizados. Construyo aplicaciones móviles con Flutter, diseño agentes conversacionales inteligentes con N8N, e integro backends empresariales (Java, C#, Node.js). Mi enfoque: resolver problemas reales con código limpio y arquitecturas que escalan.",
-        "about.p3": "No construyo features, construyo sistemas. Automatización sobre procesos manuales. Simplicidad sobre complejidad. Cada decisión técnica debe justificarse con valor de negocio real.",
+        "about.p2": "Convierto procesos manuales en sistemas autónomos. Desarrollo aplicaciones móviles con Flutter, diseño agentes inteligentes con N8N e integro backends enterprise en Java, C# y Node.js. Mi enfoque parte de entender el problema antes de escribir una sola línea de código.",
+        "about.p3": "Pienso en sistemas, no en features aisladas. Priorizo automatización sobre trabajo manual, simplicidad sobre complejidad. Cada decisión técnica responde a una necesidad concreta del proyecto.",
 
         // Projects
         "projects.featured": "Proyectos",
         "projects.destacados": "Destacados",
         "projects.title": "Proyectos",
         "projects.1.title": "Xervix - Dos Aplicaciones Móviles",
-        "projects.1.desc": "Desarrollo de dos aplicaciones empresariales con .NET Framework. Enfoque principal en maquetado de interfaces, integración con APIs y versionamiento.",
-        "projects.1.details": "Desarrollo de dos aplicaciones móviles empresariales utilizando el stack completo de .NET Framework. El trabajo principal consistió en el maquetado de interfaces con XAML, implementación de diseños responsivos y componentes reutilizables. Conexión e integración con múltiples APIs REST para consumo de datos en tiempo real, manejo de autenticación, serialización de JSON y gestión de respuestas asíncronas. Control de versiones riguroso con Git, incluyendo branching strategies, pull requests, resolución de conflictos y colaboración en equipo. Implementación de patrones MVVM, databinding, y navegación entre vistas.",
+        "projects.1.desc": "Maquetación de interfaces, integración con APIs REST, manejo de estado y autenticación en dos apps empresariales con .NET.",
+        "projects.1.details": "Desarrollo de la capa de presentación de dos aplicaciones móviles empresariales con .NET Framework y XAML. El trabajo se centró en maquetación de interfaces responsivas siguiendo diseños de UI, implementación de componentes reutilizables, integración con múltiples APIs REST para consumo de datos, manejo de estado con patrones MVVM y databinding, flujos de autenticación, serialización de JSON y gestión de respuestas asíncronas. Control de versiones con Git, branching strategies y colaboración en equipo.",
         "projects.2.title": "Agentes Conversacionales N8N",
         "projects.2.desc": "Agentes de voz y texto con N8N. Sistemas de mensajes masivos para marketing, flujos automatizados y campañas inteligentes.",
         "projects.2.details": "Desarrollo de agentes conversacionales inteligentes usando N8N con integración a backends empresariales. Conectados principalmente con sistemas Java y C# Core a través de APIs REST y webhooks. Incluye sistemas de respuesta de voz mediante integración con APIs de AI, chatbots de texto con memoria contextual, envío masivo de mensajes para campañas de marketing, automatización de seguimiento de leads, sincronización bidireccional con bases de datos corporativas, y flujos de trabajo personalizados con triggers automáticos.",
@@ -43,7 +43,7 @@ const translations = {
 
         // Stack
         "stack.title": "Stack Tecnológico",
-        "stack.subtitle": "Herramientas que uso para construir sistemas reales",
+        "stack.subtitle": "Las herramientas con las que trabajo día a día",
         "stack.tech": "Tech",
         "stack.stack": "Stack",
 
@@ -51,8 +51,8 @@ const translations = {
         "hero.scroll": "Scroll",
 
         // Contact
-        "contact.title": "¿Tienes un sistema que necesita orden?",
-        "contact.subtitle": "Trabajo con startups, negocios y equipos que necesitan automatizar procesos.",
+        "contact.title": "¿Tienes un proyecto en mente?",
+        "contact.subtitle": "Colaboro con startups, empresas y equipos técnicos que buscan automatizar y escalar sus procesos.",
         "contact.footer": "© 2025 Diego Carrasquilla · Software Engineer",
     },
     en: {
@@ -60,7 +60,7 @@ const translations = {
         "hero.name": "Diego Carrasquilla",
         "hero.title1": "Software",
         "hero.title2": "Engineer",
-        "hero.subtitle": "Building digital systems that automate, scale and deliver real value.",
+        "hero.subtitle": "I architect solutions, automate processes and build systems that scale.",
 
         // About
         "about.title": "About Me",
@@ -68,16 +68,16 @@ const translations = {
         "about.p1.highlight1": "scalable architectures",
         "about.p1.and": "and",
         "about.p1.highlight2": "complex integrations",
-        "about.p2": "I transform manual processes into automated systems. Building mobile apps with Flutter, designing intelligent conversational agents with N8N, and integrating enterprise backends (Java, C#, Node.js). My approach: solving real problems with clean code and architectures that scale.",
-        "about.p3": "I don't build features, I build systems. Automation over manual processes. Simplicity over complexity. Every technical decision must be justified by real business value.",
+        "about.p2": "I turn manual processes into autonomous systems. I develop mobile applications with Flutter, design intelligent agents with N8N, and integrate enterprise backends in Java, C# and Node.js. My approach starts with understanding the problem before writing a single line of code.",
+        "about.p3": "I think in systems, not isolated features. I prioritize automation over manual work, simplicity over complexity. Every technical decision responds to a concrete project need.",
 
         // Projects
         "projects.featured": "Featured",
         "projects.destacados": "Projects",
         "projects.title": "Projects",
         "projects.1.title": "Xervix - Two Mobile Applications",
-        "projects.1.desc": "Development of two enterprise applications with .NET Framework. Main focus on interface layout, API integration and version control.",
-        "projects.1.details": "Development of two enterprise mobile applications using the complete .NET Framework stack. Main work consisted of interface layout with XAML, implementation of responsive designs and reusable components. Connection and integration with multiple REST APIs for real-time data consumption, authentication handling, JSON serialization and asynchronous response management. Rigorous version control with Git, including branching strategies, pull requests, conflict resolution and team collaboration. Implementation of MVVM patterns, databinding, and view navigation.",
+        "projects.1.desc": "Interface layout, REST API integration, state management and authentication across two enterprise apps built with .NET.",
+        "projects.1.details": "Development of the presentation layer for two enterprise mobile applications using .NET Framework and XAML. Work focused on responsive interface layout following UI designs, reusable component implementation, integration with multiple REST APIs for data consumption, state management with MVVM patterns and databinding, authentication flows, JSON serialization and async response handling. Version control with Git, branching strategies and team collaboration.",
         "projects.2.title": "N8N Conversational Agents",
         "projects.2.desc": "Voice and text agents with N8N. Mass messaging systems for marketing, automated workflows and intelligent campaigns.",
         "projects.2.details": "Development of intelligent conversational agents using N8N with integration to enterprise backends. Connected primarily with Java and C# Core systems through REST APIs and webhooks. Includes voice response systems through AI API integration, text chatbots with contextual memory, mass messaging for marketing campaigns, lead follow-up automation, bidirectional synchronization with corporate databases, and custom workflows with automatic triggers.",
@@ -87,7 +87,7 @@ const translations = {
 
         // Stack
         "stack.title": "Tech Stack",
-        "stack.subtitle": "Tools I use to build real systems",
+        "stack.subtitle": "The tools I work with every day",
         "stack.tech": "Tech",
         "stack.stack": "Stack",
 
@@ -95,8 +95,8 @@ const translations = {
         "hero.scroll": "Scroll",
 
         // Contact
-        "contact.title": "Have a system that needs order?",
-        "contact.subtitle": "I work with startups, businesses and teams that need to automate processes.",
+        "contact.title": "Have a project in mind?",
+        "contact.subtitle": "I collaborate with startups, companies and technical teams looking to automate and scale their processes.",
         "contact.footer": "© 2025 Diego Carrasquilla · Software Engineer",
     },
 };
