@@ -1,105 +1,43 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 export default function PageBackground() {
     return (
         <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-            {/* Large ambient gradient blobs that slowly drift */}
-            <motion.div
-                className="absolute w-[800px] h-[800px] rounded-full blur-[200px]"
+            {/* Large ambient gradient blobs — CSS animated */}
+            <div
+                className="bg-blob bg-blob-1 absolute w-[500px] h-[500px] md:w-[800px] md:h-[800px] rounded-full"
                 style={{
                     top: "10%",
                     left: "-10%",
                     background:
                         "radial-gradient(circle, rgba(15,61,46,0.15), transparent 70%)",
-                }}
-                animate={{
-                    x: [0, 80, 0],
-                    y: [0, 40, -20, 0],
-                    scale: [1, 1.1, 0.95, 1],
-                }}
-                transition={{
-                    duration: 25,
-                    repeat: Infinity,
-                    ease: "easeInOut",
+                    filter: "blur(120px)",
                 }}
             />
 
-            <motion.div
-                className="absolute w-[600px] h-[600px] rounded-full blur-[180px]"
+            <div
+                className="bg-blob bg-blob-2 absolute w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-full"
                 style={{
                     top: "50%",
                     right: "-5%",
                     background:
                         "radial-gradient(circle, rgba(15,61,46,0.12), transparent 70%)",
-                }}
-                animate={{
-                    x: [0, -60, 20, 0],
-                    y: [0, -50, 30, 0],
-                    scale: [1, 0.9, 1.1, 1],
-                }}
-                transition={{
-                    duration: 30,
-                    repeat: Infinity,
-                    ease: "easeInOut",
+                    filter: "blur(100px)",
                 }}
             />
 
-            <motion.div
-                className="absolute w-[500px] h-[500px] rounded-full blur-[160px]"
+            <div
+                className="bg-blob bg-blob-3 absolute w-[350px] h-[350px] md:w-[500px] md:h-[500px] rounded-full"
                 style={{
                     bottom: "5%",
                     left: "20%",
                     background:
                         "radial-gradient(circle, rgba(15,80,55,0.1), transparent 70%)",
-                }}
-                animate={{
-                    x: [0, 50, -30, 0],
-                    y: [0, -40, 20, 0],
-                }}
-                transition={{
-                    duration: 22,
-                    repeat: Infinity,
-                    ease: "easeInOut",
+                    filter: "blur(100px)",
                 }}
             />
 
-            {/* Subtle horizontal light streak */}
-            <motion.div
-                className="absolute w-full h-px top-[30%] opacity-[0.04]"
-                style={{
-                    background:
-                        "linear-gradient(90deg, transparent, rgba(15,61,46,0.6) 30%, rgba(15,61,46,0.8) 50%, rgba(15,61,46,0.6) 70%, transparent)",
-                }}
-                animate={{
-                    opacity: [0.03, 0.06, 0.03],
-                }}
-                transition={{
-                    duration: 8,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                }}
-            />
-
-            <motion.div
-                className="absolute w-full h-px top-[70%] opacity-[0.03]"
-                style={{
-                    background:
-                        "linear-gradient(90deg, transparent, rgba(15,61,46,0.5) 40%, rgba(15,61,46,0.6) 50%, rgba(15,61,46,0.5) 60%, transparent)",
-                }}
-                animate={{
-                    opacity: [0.02, 0.05, 0.02],
-                }}
-                transition={{
-                    duration: 10,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 3,
-                }}
-            />
-
-            {/* Global noise texture */}
+            {/* Global noise texture — static */}
             <div
                 className="absolute inset-0 opacity-[0.018] mix-blend-overlay"
                 style={{
@@ -108,7 +46,7 @@ export default function PageBackground() {
                 }}
             />
 
-            {/* Subtle dot grid that recedes into depth */}
+            {/* Subtle dot grid — static */}
             <div
                 className="absolute inset-0 opacity-[0.025]"
                 style={{

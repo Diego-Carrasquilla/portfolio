@@ -71,3 +71,243 @@
 .preserve-3d {
   transform-style: preserve-3d;
 }
+
+/* ==========================================
+   Hero — CSS-only background animations
+   ========================================== */
+
+/* Aurora sweep */
+.hero-aurora {
+  background: radial-gradient(ellipse 80% 50% at 20% 40%, rgba(15, 61, 46, 0.6), transparent 60%);
+  animation: heroAuroraSweep 12s ease-in-out infinite;
+  will-change: background;
+}
+
+@keyframes heroAuroraSweep {
+
+  0%,
+  100% {
+    background: radial-gradient(ellipse 80% 50% at 20% 40%, rgba(15, 61, 46, 0.6), transparent 60%);
+  }
+
+  33% {
+    background: radial-gradient(ellipse 80% 50% at 80% 60%, rgba(15, 61, 46, 0.5), transparent 60%);
+  }
+
+  66% {
+    background: radial-gradient(ellipse 80% 50% at 50% 30%, rgba(15, 80, 55, 0.6), transparent 60%);
+  }
+}
+
+/* Orb pulse variants */
+.hero-orb-1 {
+  animation: heroOrbPulse1 8s ease-in-out infinite;
+}
+
+.hero-orb-2 {
+  animation: heroOrbPulse2 10s ease-in-out infinite;
+}
+
+@keyframes heroOrbPulse1 {
+
+  0%,
+  100% {
+    transform: translateZ(0) scale(1);
+    opacity: 0.30;
+  }
+
+  50% {
+    transform: translateZ(0) scale(1.15);
+    opacity: 0.40;
+  }
+}
+
+@keyframes heroOrbPulse2 {
+
+  0%,
+  100% {
+    transform: translateZ(0) scale(1.1);
+    opacity: 0.25;
+  }
+
+  50% {
+    transform: translateZ(0) scale(0.95);
+    opacity: 0.35;
+  }
+}
+
+/* Horizon glow pulse */
+.hero-horizon {
+  animation: heroHorizonPulse 6s ease-in-out infinite;
+}
+
+@keyframes heroHorizonPulse {
+
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Ring rotation */
+.hero-ring {
+  animation: heroRingSpin 18s linear infinite;
+}
+
+.hero-ring-reverse {
+  animation: heroRingSpinReverse 22s linear infinite;
+}
+
+@keyframes heroRingSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes heroRingSpinReverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* Particle float */
+.hero-particle {
+  animation: heroParticleFloat 4s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes heroParticleFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(var(--travel, -20px));
+    opacity: 0.8;
+  }
+}
+
+/* Scroll indicator */
+.hero-scroll-indicator {
+  animation: heroScrollBounce 2s ease-in-out infinite;
+}
+
+@keyframes heroScrollBounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+.hero-scroll-dot {
+  animation: heroScrollDotFade 2s ease-in-out infinite;
+}
+
+@keyframes heroScrollDotFade {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.hero-scroll-text {
+  animation: heroScrollTextPulse 2s ease-in-out infinite;
+}
+
+@keyframes heroScrollTextPulse {
+
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* PageBackground — CSS-only ambient blobs */
+.bg-blob {
+  will-change: transform, opacity;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.bg-blob-1 {
+  animation: bgBlob1 14s ease-in-out infinite;
+}
+
+.bg-blob-2 {
+  animation: bgBlob2 18s ease-in-out infinite;
+}
+
+.bg-blob-3 {
+  animation: bgBlob3 20s ease-in-out infinite;
+}
+
+@keyframes bgBlob1 {
+
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.12;
+  }
+
+  50% {
+    transform: translate(-40%, -60%) scale(1.1);
+    opacity: 0.18;
+  }
+}
+
+@keyframes bgBlob2 {
+
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.10;
+  }
+
+  50% {
+    transform: translate(-60%, -40%) scale(1.15);
+    opacity: 0.16;
+  }
+}
+
+@keyframes bgBlob3 {
+
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.08;
+  }
+
+  50% {
+    transform: translate(-45%, -55%) scale(1.1);
+    opacity: 0.14;
+  }
+}
